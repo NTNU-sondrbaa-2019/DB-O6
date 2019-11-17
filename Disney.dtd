@@ -1,0 +1,22 @@
+<!ELEMENT Disney (Actors, Subsidiaries)>
+
+<!ELEMENT Actors (Actor*)>
+<!ELEMENT Actor (Name, BirthDay, BirthPlace)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT BirthDay (#PCDATA)>
+<!ELEMENT BirthPlace (#PCDATA)>
+<!ATTLIST Actor id ID #REQUIRED>
+
+<!ELEMENT Subsidiaries (Subsidiary+)>
+<!ATTLIST Subsidiary id ID #REQUIRED>
+<!ELEMENT Subsidiary (Movie+)>
+<!ELEMENT Movie (Name, Year, ScreenTime?, Cast?)>
+<!ATTLIST Name lang CDATA #IMPLIED>
+<!ELEMENT Year (#PCDATA)>
+<!ELEMENT ScreenTime (#PCDATA)>
+<!ATTLIST ScreenTime unit (minutes | seconds) #REQUIRED>
+<!ELEMENT Cast (Role+)>
+<!ELEMENT Role EMPTY>
+<!ATTLIST Role name CDATA #REQUIRED>
+<!ATTLIST Role alias CDATA #IMPLIED>
+<!ATTLIST Role actor IDREF #REQUIRED>

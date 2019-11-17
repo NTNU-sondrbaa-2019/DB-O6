@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Disney xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="Disney.xsd">
+  <Actors />
+
+  <Subsidiaries>
+    <Subsidiary id="WaltDisneyPictures">
+      <Movie>
+        <Name lang="en">Pinocchio</Name>
+        <Year>1940</Year>
+      </Movie>
+    </Subsidiary>
+  </Subsidiaries>
+
+</Disney>
